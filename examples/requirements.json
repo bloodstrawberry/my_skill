@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "goal": {"value": "주문 합계를 근거와 함께 확인", "status": "confirmed", "evidence": ["input/notes.txt:line=3"]},
+  "users": {"value": ["합성 예제의 운영 담당자"], "status": "assumed", "evidence": []},
+  "inputs": {"value": ["items.csv", "notes.txt"], "status": "confirmed", "evidence": ["expected.json"]},
+  "outputs": {"value": "요구사항별 정형 검사 JSON", "status": "assumed", "evidence": []},
+  "constraints": {"value": "외부 API 없이 로컬 계산", "status": "assumed", "evidence": []},
+  "requirements": [
+    {"id": "R-total", "status": "confirmed", "statement": "합계는 2000 KRW", "evidence": ["input/notes.txt:line=3"], "acceptance": "1200+800=2000", "verification": "source_quote와 decimal_sum", "exceptions": ["수치/근거 누락이면 fail 또는 unverified"]},
+    {"id": "R-format", "status": "confirmed", "statement": "통화는 KRW", "evidence": ["input/notes.txt:line=2"], "acceptance": "통화 문자열 KRW", "verification": "equals", "exceptions": ["다른 통화는 환산 정책 질문"]}
+  ],
+  "questions": [{"id": "Q-1", "question": "실무 사용자는 누구이며 누락 금액의 처리는?", "impact": "실무 확장 시 확인 필요", "blocks": []}]
+}
