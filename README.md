@@ -55,3 +55,11 @@ python -m unittest discover -s tests -v
 핵심 추출/정형 검사와 합성 자료의 누락·오류·경계 사례를 실행했다. 실제 Chromium 로컬 화면 캡처도 실행했다. OCR 엔진, 실제 전사/영상 디코딩, 로그인 사이트, 외부 모델 API, 대회 플랫폼 제출/채점은 검증 완료가 아니다. coordinate-work의 예산/체크포인트는 에이전트가 적용하는 절차이며 자동 스케줄러가 아니다. 자세한 실행 결과는 docs/validation.md에 기록한다.
 
 원본/개인정보/인증 상태는 커밋하지 않는다. `work/`는 기본 제외된다. 새 작업 브랜치에서 검증 후 관련 변경만 푸시한다.
+
+## 해커톤 확장 (2026-10-29)
+
+공식 공개 Skill `pdf`, `jupyter-notebook`, `paddleocr-text-recognition`, `paddleocr-doc-parsing`을 추가했다. `hackathon-workflow`, `analyze-tables`, `write-deliverables`, `ocr-chandra`는 검증된 도구를 연결하는 자체 지침이다. 기존 7개와 합쳐 15개다.
+
+`$hackathon-workflow`로 시작한다. Cofa 사용 제한, OCR별 강점, 공개 저장소 사용 규모와 라이선스는 [해커톤 프로필](docs/hackathon.md)을 읽는다. 공식 PaddleOCR Skill은 API 기반이므로 Cofa 응시 중 실행하지 않는다. Chandra는 일반 연습용이다. Skill 설치는 엔진/가중치 설치를 뜻하지 않는다.
+
+다른 시험 환경에서는 공개 저장소를 clone한 뒤 필요한 Skill 폴더 전체를 `.agents/skills/`로 복사하고 AGENTS.md의 해당 대회 조건도 적용한다. 현재 설치된 Skill은 다음 대화부터 발견 가능하다.

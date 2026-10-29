@@ -30,3 +30,12 @@
 - [AI_TOP_100 공식 사이트](https://aitop100.org/): 2026 안내에서 가상 인물 인터뷰 후 AI 에이전트를 제작·제출하고 내부 평가 기준으로 심사한다고 확인했다. 이 저장소는 그 흐름에 맞춘 재사용 도구이며 공식 제출 규격/내부 채점 항목을 구현했다고 주장하지 않는다.
 - [구혜승의 AI TOP 100 Campus 2026 본선 후기](https://kr.linkedin.com/posts/goohaeseung_3000%EB%AA%85-%EC%A4%91-100%EB%AA%85-ai-top-100-campus-2026-activity-7446949422493564928-tG6a): **비입상 참가자의 자기보고**다. Claude Code 조정, 소문항 병렬 처리, OCR/음성 도구 비교, 사람 개입 규칙, 쿠키 접속 조건과 검증 부족의 경험을 언급한다. Campus 회차 경험을 올해 하반기 대회 규칙이나 수상자 사용법으로 일반화하지 않는다. 모델별 속도/정확도 수치를 이 저장소에서 재현하지 않았으므로 추천 근거로 확정하지 않는다.
 - **이 저장소의 제안**: 7개 역할, 요구사항 ID, SHA-256/위치 연결, Decimal 계산, 겹침 구간 계획, 설정 가능한 시도/동시 실행/시간 예산, JSON 체크포인트와 마지막 검증. 후기의 실제 구현이라고 서술하지 않는다.
+
+## 해커톤 확장 조사 (2026-10-29)
+
+이번 확장에는 공식 Skill 원본을 설치하고 LICENSE를 보존했다. 앞의 '외부 Skill을 복사하지 않았다'는 초기 7개 작성 시점 기록이다. 최신 설치 목록/고정 커밋/수정 범위는 [hackathon.md](hackathon.md)와 각 Skill의 UPSTREAM.md, 규모는 [toolkit-sources.json](toolkit-sources.json) 참조.
+
+- https://aitop100.org/about 및 https://aitop100.org/ : 과거 다형식 문제와 올해 인터뷰·에이전트 방식.
+- https://www.paddleocr.ai/main/en/version3.x/integrations/skills.html : 공식 두 Skill은 API 기반, 토큰 필요.
+- https://github.com/datalab-to/chandra : 로컬 hf CLI와 코드/모델 라이선스 구분.
+- 사용자 첨부 1_시험_필수확인사항_브리프.pdf p1, 2_Proctor_설치_및_촬영가이드.pdf p1, 3_사전_체험_및_응시환경_상세_가이드.pdf p1~5: Cofa 조건. 원본과 추출 전문은 공개 저장소에 포함하지 않았다.

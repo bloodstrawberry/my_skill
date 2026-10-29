@@ -1,0 +1,84 @@
+{
+  "checked": "2026-10-29",
+  "metric": "repository stars, not skill installations",
+  "sources": [
+    {
+      "full_name": "openai/skills",
+      "html_url": "https://github.com/openai/skills",
+      "stargazers_count": 28387,
+      "archived": false,
+      "pushed_at": "2026-10-28T17:31:41Z",
+      "license": null
+    },
+    {
+      "full_name": "PaddlePaddle/PaddleOCR",
+      "html_url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "stargazers_count": 91933,
+      "archived": false,
+      "pushed_at": "2026-09-16T03:31:50Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "full_name": "datalab-to/chandra",
+      "html_url": "https://github.com/datalab-to/chandra",
+      "stargazers_count": 12630,
+      "archived": false,
+      "pushed_at": "2026-10-22T10:18:53Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "full_name": "tesseract-ocr/tesseract",
+      "html_url": "https://github.com/tesseract-ocr/tesseract",
+      "stargazers_count": 77228,
+      "archived": false,
+      "pushed_at": "2026-10-28T11:18:10Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "full_name": "pandas-dev/pandas",
+      "html_url": "https://github.com/pandas-dev/pandas",
+      "stargazers_count": 50338,
+      "archived": false,
+      "pushed_at": "2026-10-29T01:11:55Z",
+      "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      }
+    },
+    {
+      "full_name": "python-openxml/python-docx",
+      "html_url": "https://github.com/python-openxml/python-docx",
+      "stargazers_count": 5752,
+      "archived": false,
+      "pushed_at": "2026-08-01T14:59:42Z",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    }
+  ]
+}
