@@ -25,3 +25,13 @@ python -m venv .venv
 이 저장소에는 외부 모델 API 클라이언트가 없고 유료 서비스가 필수가 아니다. `.env.example`의 AI_*는 향후 별도 어댑터용 예약 변수이며 현재 코드가 읽지 않는다. 제공자를 선택하면 현재 공식 API 문서를 확인해 키를 OS/비밀 저장소에 설정하고 모델명/URL을 설정으로 주입한다. 실제 호출 전에는 API 검증 완료라고 보고하지 않는다. RUN_BROWSER_TESTS만 현재 테스트가 읽으며 `.env`를 자동 로드하지 않는다.
 
 Git 푸시는 Git Credential Manager의 GitHub HTTPS 인증과 해당 저장소 쓰기 권한이 필요하다. 키/토큰을 명령 인자나 저장소 파일에 넣지 않는다.
+
+## 해커톤 확장 도구
+
+추가된 Skill 8개는 저장소 `.agents/skills/`에 설치되어 있다. 핵심 사용 예는 `$hackathon-workflow`와 `$analyze-tables`다. Cofa에서는 docs/hackathon.md의 제한을 먼저 적용한다.
+
+- PDF/문서/표: 선택 의존성에 pandas와 reportlab을 추가했다. 기존 python-docx/openpyxl/pypdf와 함께 필요에 따라 별도 가상환경에 설치한다. 이번 검증의 python-docx 1.2.0, reportlab 5.1.0은 전역 환경 변경 없이 `work/toolkit-deps`에 설치했다. 일반 실행 시 자동 로드되지 않으므로 실제 사용 환경에 설치가 필요하다. 이 임시 폴더에는 Pillow 13도 포함되어 기존 fastembed의 Pillow<13 조건과 충돌 경고가 있었으므로 공용 PYTHONPATH에 추가하지 않는다.
+- Jupyter: `python .agents/skills/jupyter-notebook/scripts/new_notebook.py --kind experiment --title "Data audit" --out work/data-audit.ipynb`. 생성기는 표준 라이브러리만 필요하며 커널 실행에는 별도 Jupyter 환경이 필요하다.
+- PaddleOCR 공식 두 Skill: 일반 연습에서만 `paddleocr>=3.7.0` CLI와 PADDLEOCR_ACCESS_TOKEN이 필요하다. PADDLEOCR_BASE_URL은 선택 설정이다. 이번에는 Skill 파일만 설치했고 CLI/API 호출은 미실행이다.
+- Chandra: 일반 연습에서 라이선스·하드웨어 조건 확인 후 별도 가상환경에 `chandra-ocr[hf]`를 설치한다. 이번에는 Skill 지침만 추가했고 엔진/가중치는 설치하지 않았다.
+- `.env.example`의 브라우저 테스트 기본값은 0이다. Cofa 외의 허용된 개발 환경에서만 명시적으로 1을 설정한다.
