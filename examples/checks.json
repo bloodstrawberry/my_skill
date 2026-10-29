@@ -1,0 +1,11 @@
+{
+  "source_root": "input",
+  "evidence": "../work/example/evidence.json",
+  "requirements": [
+    {"id": "R-total", "checks": [
+      {"type": "source_quote", "evidence_id": "notes.txt#3", "quote": "2000 KRW"},
+      {"type": "decimal_sum", "values": ["1200", "800"], "expected": "2000"}
+    ]},
+    {"id": "R-format", "checks": [{"type": "equals", "actual": "KRW", "expected": "KRW"}]}
+  ]
+}

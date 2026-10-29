@@ -1,0 +1,11 @@
+{
+  "run_id": "synthetic-order",
+  "deadline_seconds": 900,
+  "per_task_timeout_seconds": 120,
+  "max_attempts_per_task": 2,
+  "max_concurrency": 1,
+  "max_no_progress_attempts": 2,
+  "model_provider": null,
+  "model_name": null,
+  "network_allowed": false
+}
