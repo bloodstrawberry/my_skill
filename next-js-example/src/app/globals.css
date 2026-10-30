@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { overflow: hidden; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 3px solid #00a76f; outline-offset: 3px; }
+::selection { background: #b5f0da; color: #163b2d; }
