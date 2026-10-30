@@ -2,7 +2,7 @@
   "name": "next-js-example",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "yarn@1.22.4",
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --port 3000",
     "build": "next build --webpack",

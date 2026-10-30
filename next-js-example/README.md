@@ -39,3 +39,18 @@ yarn start
 - `src/app/tools/[slug]/page.tsx`: 도구 라우팅, 허용 slug 목록
 
 새 도구를 추가하면 메뉴 목록과 라우트 slug 목록을 함께 갱신하세요. 필요한 기능 라이브러리는 과제가 확정된 뒤 개별적으로 설치하세요.
+
+## 검증 기록 (2026-10-30)
+
+| 요구사항 | 결과 | 근거 |
+|---|---|---|
+| Next.js UI 골격 | 통과 | TypeScript 검사와 production build 성공, 홈/6개 도구 페이지 HTTP 200 |
+| 필요한 UI 패키지 설치 | 통과 | 실제 node_modules 확인, yarn.lock 생성 |
+| 그 외 처리 라이브러리 대기 | 통과 | 직접 의존성 허용 목록 검사, PDF/OCR/Excel/FFmpeg/Mammoth/PptxGenJS 미설치 확인 |
+| 라이브러리 문서 | 통과 | 상위 next_library.md에 우선순위·조건·출처 정리 |
+| 메뉴/검색/필터/테마 | 확인 | 로컬 IAB에서 메뉴 열기·닫기, 작업 공간 이동, 검색 모달·빈 검색 결과, 문서 필터 2개, 다크/라이트 전환 확인 |
+| 없는 도구 경로 | 통과 | /tools/missing HTTP 404 |
+
+검증 환경: Node 24.22.1, Yarn 1.22.4, Next.js 16.4.3, React 19.3.1, MUI 7.3.11. 브라우저는 로그인 없는 로컬 IAB의 약 769px 폭에서 확인했다. 모든 화면 크기의 시각 회귀, 별도 데스크톱 viewport, Ctrl/Cmd+K 및 저장 상태의 재시작 복원은 별도 자동 테스트하지 않았다. 업무 처리/API 연결은 구현 범위 밖이다.
+
+저장소 기존 검사 `python -m unittest discover -s tests -v`: 16개 통과, 브라우저 검사 1개 건너뜀. 이는 기존 스킬의 검사이며 새 UI의 브라우저 확인과 구분한다.
